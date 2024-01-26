@@ -1,0 +1,25 @@
+api_platform:
+    
+    title: TEST API
+    version: 1.0.0
+    # Good defaults for REST APIs
+    defaults:
+        stateless: true
+        cache_headers:
+            vary: ['Content-Type', 'Authorization', 'Origin']
+        extra_properties:
+            standard_put: true
+
+        pagination_items_per_page: 5
+
+
+        pagination_client_items_per_page: true 
+
+        graphql:
+            collection:
+                pagination:
+                    enable: true
+
+    collection:
+        pagination:
+            items_per_page_parameter_name: 'nbItems'

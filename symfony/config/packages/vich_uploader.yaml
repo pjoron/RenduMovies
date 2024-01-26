@@ -1,0 +1,8 @@
+vich_uploader:
+    db_driver: orm # Utilisez ORM si vous utilisez Doctrine ORM
+    mappings:
+        # Configuration spécifique à votre entité
+        media_object:
+            uri_prefix: /uploads/ # Préfixe pour les URLs générées
+            upload_destination: '%kernel.project_dir%/public/uploads' # Répertoire où seront stockés les fichiers
+            namer: Vich\UploaderBundle\Naming\OrignameNamer # Nommez les fichiers avec leur nom d'origine
